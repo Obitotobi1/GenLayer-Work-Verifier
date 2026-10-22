@@ -26,7 +26,7 @@ The contract does not transfer funds or verify external actions.
 From this directory:
 
 ```sh
-python -m unittest discover -s tests -v
+python -m unittest test_contract -v
 ```
 
 These tests use a small mock of the GenLayer SDK. They exercise contract logic such as access control, status derivation, retry limits, malformed model responses, and validator disagreement. They do **not** run GenVM, real validators, live AI, storage serialization, or a deployed network.

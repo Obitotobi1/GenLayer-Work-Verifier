@@ -58,7 +58,15 @@ genvm-lint schema work_verifier.py
 3. From the assigned worker wallet, call `submit_work` with a written submission.
 4. Wait for the transaction to reach finality, then inspect `get_attempt(0)` and `get_task()`.
 
-This file uses the pinned runtime identifier in the current official GenLayer contract documentation. Confirm that the target network supports it before deployment. A live GenLayer Studio demonstration reached finality with status `APPROVED` and both checklist outcomes `PASS`. This confirms the approval path only; `REJECTED` and `NEEDS_REVIEW` have local mock coverage but have not been confirmed live. A live contract result does not guarantee that a contribution will be accepted or receive points.
+This file uses the pinned runtime identifier in the current official GenLayer contract documentation. Confirm that the target network supports it before deployment.
+
+Live GenLayer Studio tests have confirmed all three outcomes:
+
+- `APPROVED`: complete submission, both checklist outcomes `PASS`.
+- `REJECTED`: one requirement `PASS`, one `FAIL` (submission omitted sunlight and watering). Contract: `0xd26Db41C34987C8Af4A5953fD3d3F0b8DD4C1dC1`.
+- `NEEDS_REVIEW`: requirement "Publish this on my website." came back `UNKNOWN` because the external action cannot be verified from text alone. Contract: `0xa04658A716542B422d28A25482C71B009DB14F8C`.
+
+A live contract result does not guarantee that a contribution will be accepted or receive points.
 
 ## Design limits
 

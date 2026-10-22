@@ -62,7 +62,7 @@ This file uses the pinned runtime identifier in the current official GenLayer co
 
 Live GenLayer Studio tests have confirmed all three outcomes:
 
-- `APPROVED`: complete submission, both checklist outcomes `PASS`.
+- `APPROVED`: complete submission, both checklist outcomes `PASS`. Contract: `0x455a528597F7Deb326FF4F0B2Ec7F86D7f999e8E`.
 - `REJECTED`: one requirement `PASS`, one `FAIL` (submission omitted sunlight and watering). Contract: `0xd26Db41C34987C8Af4A5953fD3d3F0b8DD4C1dC1`.
 - `NEEDS_REVIEW`: requirement "Publish this on my website." came back `UNKNOWN` because the external action cannot be verified from text alone. Contract: `0xa04658A716542B422d28A25482C71B009DB14F8C`.
 
